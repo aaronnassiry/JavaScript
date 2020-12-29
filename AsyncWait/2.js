@@ -1,20 +1,21 @@
 async function test() {
     return new Promise((resolve, reject) => {
         let a = 1 + 1;
-        if (a === 2) {
-            console.log("Success");
-            resolve("Success");
+        if (a === 3) {
+             console.log("Success");
+             resolve("Success");
         }
         else {
             reject("Failed");
+            process.exitCode = 1;
         }
     });
 }
 
-async function validate() {
+async function validate(){
     try {
-        await test();
-    } catch (error) {
+       await test();
+    } catch (error){
         console.error(error);
     }
 }
