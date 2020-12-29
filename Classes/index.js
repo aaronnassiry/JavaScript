@@ -11,6 +11,10 @@ class Person {
     setOccupation(occupation){
         this.occupation = occupation;
     }
+
+    static myMethod(){
+        return "this is a static method";
+    }
 }
 
 let a = new Person("Jim", "Cooper", 29);
@@ -24,3 +28,5 @@ console.log(a);
 Object.defineProperty(Person.prototype, 'occupation', {enumerable: true});
 let c = new Person("Jesse", "James", 30);
 console.log(c);
+
+console.log(Person.myMethod());
