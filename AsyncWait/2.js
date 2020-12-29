@@ -2,8 +2,8 @@ async function test() {
     return new Promise((resolve, reject) => {
         let a = 1 + 1;
         if (a === 2) {
-             console.log("Success");
-             resolve("Success");
+            console.log("Success");
+            resolve("Success");
         }
         else {
             reject("Failed");
@@ -11,10 +11,10 @@ async function test() {
     });
 }
 
-async function validate(){
+async function validate() {
     try {
-       await test();
-    } catch (error){
+        await test();
+    } catch (error) {
         console.error(error);
     }
 }
