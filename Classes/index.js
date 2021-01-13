@@ -19,14 +19,15 @@ class Person {
 
 let a = new Person("Jim", "Cooper", 29);
 a.setOccupation("carpenter");
-console.log(a.personDetails());
+console.log("a.personDetails " + a.personDetails());
 
 let b = new Person("Aaron", "Nassiry", 30);
-Object.assign(a, b);
-console.log(a);
+Object.assign(a, b); //assign b to a
+console.log("a.personDetails " + a.personDetails());
+console.log("b.personDetails " + b.personDetails());
 
 Object.defineProperty(Person.prototype, 'occupation', {enumerable: true});
 let c = new Person("Jesse", "James", 30);
-console.log(c);
+console.log(c.personDetails());
 
 console.log(Person.myMethod());
