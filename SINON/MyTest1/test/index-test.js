@@ -34,4 +34,9 @@ describe('Test Describe', () => {
         } catch (e){}
         expect(mySpy.threw()).to.be.true;
     });
+
+    it('1st unit callCount', () => {
+        subject.func("test1", "test2");
+        expect(mySpy.callCount).to.equal(6);
+    });
   });
