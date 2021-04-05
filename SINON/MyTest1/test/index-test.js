@@ -4,6 +4,8 @@ const subject = require('../src/index.js');
 const expect = require('chai').expect;
 
 const mySpy = sinon.spy(subject, "func");
+const myStub = sinon.stub(subject, "func2");
+
 
 describe('Test Describe', () => {
 
@@ -39,4 +41,15 @@ describe('Test Describe', () => {
         subject.func("test1", "test2");
         expect(mySpy.callCount).to.equal(6);
     });
+
+    it('Test Actual Return Value', () => {
+        const returnValue = subject.func("test1", "test2");
+        expect(returnValue).to.equal("done");
+    });
+
+    it('Test Mocked Return Value', () => {
+        myStub.returns("wow");
+        expect(myStub()).to.equal("wow");
+    });
+
   });
