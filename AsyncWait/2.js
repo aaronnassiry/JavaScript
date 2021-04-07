@@ -7,7 +7,7 @@ async function test() {
         }
         else {
             reject("Failed");
-            process.exitCode = 1;
+            throw new Error("rejected");
         }
     });
 }
