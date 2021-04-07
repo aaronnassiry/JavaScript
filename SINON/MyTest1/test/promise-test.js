@@ -6,9 +6,12 @@ const myStub = sinon.stub(subject, "validate");
 
 
 describe('Test Promise', () => {
-    it('call stub with resolves', () => {
-        subject.validate();
+    it.only('call stub with resolves', () => {
+        //console.log('test');
+        subject.validate("9");
+        myStub.withArgs({param1: 9}).rejects();
+        //subject.validate();
         //myStub.resolves(7);
-        myStub.rejects({err: 'Fail'});
+        //myStub.rejects({err: 'Fail'});
     });
 });
