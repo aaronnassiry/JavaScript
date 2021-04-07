@@ -6,7 +6,6 @@ const expect = require('chai').expect;
 const mySpy = sinon.spy(subject, "func");
 const myStub = sinon.stub(subject, "func2");
 
-
 describe('Test Describe', () => {
 
     it('1st unit called', () => {
