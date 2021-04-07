@@ -7,6 +7,7 @@ async function test(param1) {
         }
         else {
             reject("Odd " + param1);
+            throw new Error();
         }
     });
 }
@@ -20,7 +21,7 @@ async function validate(param1){
     }
 }
 
-validate();
+validate(param1=7);
 
 module.exports = {
     test,
