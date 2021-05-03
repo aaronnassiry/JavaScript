@@ -1,0 +1,17 @@
+{
+  "name": "mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@store-sfdcbt-net/CICD_gulp-central-js-lib-v1": "latest"
+  },
+  "dependencies": {
+    "@store-sfdcbt-net/CICD_gulp-cli-util": "1.6.88"
+  }
+}
